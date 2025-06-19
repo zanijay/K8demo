@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongo-express-deployment
-  namespace: mongo-ui
   labels:
     app: mongo-express
 spec:
