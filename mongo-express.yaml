@@ -36,6 +36,17 @@ spec:
             configMapKeyRef:
               name: mongo-config
               key: mongo-url
+        - name: ME_CONFIG_BASICAUTH_USERNAME 
+          valueFrom:
+            secretKeyRef:
+              name: mongo-secret
+              key: web-user
+        - name: ME_CONFIG_BASICAUTH_PASSWORD 
+          valueFrom:
+            secretKeyRef:
+              name: mongo-secret
+              key: web-password
+          
 
 ---
 apiVersion: v1
